@@ -1,0 +1,8 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<hudson.plugins.xvnc.Xvnc_-DescriptorImpl>
+  <helpRedirect/>
+  <xvnc></xvnc>
+  <baseDisplayNumber>10</baseDisplayNumber>
+  <skipOnWindows>true</skipOnWindows>
+  <cleanUp>false</cleanUp>
+</hudson.plugins.xvnc.Xvnc_-DescriptorImpl>
