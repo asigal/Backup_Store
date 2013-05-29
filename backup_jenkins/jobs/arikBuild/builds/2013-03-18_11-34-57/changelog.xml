@@ -1,0 +1,20 @@
+Changes in branch origin/master, between 5890af2a9a8060ebb23e827ca996af6a2e672bae and a70be05e1a5a8e21b4bf390a77af9e1d9e08541e
+commit a70be05e1a5a8e21b4bf390a77af9e1d9e08541e
+tree 7160fe0af8e4126134a562823002da035f4ae912
+parent 5890af2a9a8060ebb23e827ca996af6a2e672bae
+author DimitryB <yadima10@gmail.com> 1363606438 +0200
+committer DimitryB <yadima10@gmail.com> 1363606438 +0200
+
+    upgrade #3 skill4_test2
+
+:000000 100644 0000000000000000000000000000000000000000 961a651f9920a715710e264af3a6acd215eb03b0 A	C0_Scripts/skill4_driving.xml
+Changes in branch origin/HEAD, between 5890af2a9a8060ebb23e827ca996af6a2e672bae and a70be05e1a5a8e21b4bf390a77af9e1d9e08541e
+commit a70be05e1a5a8e21b4bf390a77af9e1d9e08541e
+tree 7160fe0af8e4126134a562823002da035f4ae912
+parent 5890af2a9a8060ebb23e827ca996af6a2e672bae
+author DimitryB <yadima10@gmail.com> 1363606438 +0200
+committer DimitryB <yadima10@gmail.com> 1363606438 +0200
+
+    upgrade #3 skill4_test2
+
+:000000 100644 0000000000000000000000000000000000000000 961a651f9920a715710e264af3a6acd215eb03b0 A	C0_Scripts/skill4_driving.xml

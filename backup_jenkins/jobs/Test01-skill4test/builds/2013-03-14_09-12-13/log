@@ -1,0 +1,138 @@
+Started by user [8mha:AAAAnR+LCAAAAAAAAABb85aBtbiIQTGjNKU4P08vOT+vOD8nVc83PyU1x6OyILUoJzMv2y+/JJUBAhiZGBgqihhk0NSjKDWzXb3RdlLBUSYGJk8GtpzUvPSSDB8G5tKinBIGIZ+sxLJE/ZzEvHT94JKizLx0a6BxUmjGOUNodHsLgAxeoBn6pcWpRfpB+UmZOV6pedmZecUAux4198cAAAA=[0mRobil Jenkins
+Building in workspace /mnt/jenkins/jobs/arikBuild/workspace
+Starting xvnc
+[workspace] $ vncserver :10 -localhost -nolisten tcp
+xauth: (stdin):1:  bad display name "ip-10-0-0-52:10" in "add" command
+
+New 'ip-10-0-0-52:10 ()' desktop is ip-10-0-0-52:10
+
+Starting applications specified in /var/lib/jenkins/.vnc/xstartup
+Log file is /var/lib/jenkins/.vnc/ip-10-0-0-52:10.log
+
+[workspace] $ /bin/bash /tmp/hudson4740041864357330913.sh
+ 
+Test Visit Card
+=============================================================
+Date:      Thu Mar 14 09:12:16 UTC 2013
+Test:      Test01-skill4test
+Workspace: /mnt/jenkins/jobs/arikBuild/workspace
+Testing:   commit 166d491ca974630456664465be3cf1d6df221027
+Author: Arik Sigal <ark.sigal@gmail.com>
+Date:   Wed Mar 13 14:38:39 2013 +0200
+
+    tree skill4_driving fix
+=============================================================
+ 
+==========================
+Task 1. Init ROS workspace
+==========================
+Skipped...
+ 
+=============================
+Task 2. Setup ROS environment
+=============================
+declare -x ROSLISP_PACKAGE_DIRECTORY="/opt/ros/fuerte/share/common-lisp/ros"
+declare -x ROS_DISTRO="fuerte"
+declare -x ROS_ETC_DIR="/opt/ros/fuerte/etc/ros"
+declare -x ROS_MASTER_URI="http://localhost:11311"
+declare -x ROS_PACKAGE_PATH="/opt/ros/fuerte/stacks:/opt/ros/fuerte/share:/opt/ros/fuerte/share/ros:/opt/additional/:/mnt/jenkins/jobs/arikBuild/workspace"
+declare -x ROS_ROOT="/opt/ros/fuerte/share/ros"
+declare -x ROS_WORKSPACE="/mnt/jenkins/jobs/arikBuild/workspace"
+ 
+=================
+Task 3. Build all
+=================
+Skiped...
+ 
+==================
+Task 4. Setup test
+==================
+declare -x BUILD_ID="2013-03-14_09-12-13"
+declare -x BUILD_NUMBER="13"
+declare -x BUILD_TAG="jenkins-Test01-skill4test-13"
+declare -x BUILD_URL="http://107.23.158.13:8080/job/Test01-skill4test/13/"
+declare -x CMAKE_PREFIX_PATH="/opt/ros/fuerte/share/catkin/cmake/Modules:/opt/ros/fuerte:/opt/ros/fuerte/share/catkin/cmake/Modules:/opt/ros/fuerte:"
+declare -x DISPLAY=":10"
+declare -x EXECUTOR_NUMBER="2"
+declare -x GAZEBO_MASTER_URI="http://localhost:11345"
+declare -x GAZEBO_MODEL_DATABASE_URI="http://gazebosim.org/models"
+declare -x GAZEBO_MODEL_PATH="/usr/share/sandia-hand-5.1/ros/sandia_hand_description/gazebo:/usr/share/drcsim-2.0/gazebo_models/irobot_hand_description:/usr/share/drcsim-2.0/gazebo_models/multisense_sl_description:/usr/share/drcsim-2.0/gazebo_models/atlas_description:/usr/share/drcsim-2.0/gazebo_models/environments:"
+declare -x GAZEBO_PLUGIN_PATH="/usr/lib/drcsim-2.0/plugins:/usr/lib/gazebo-1.4/plugins"
+declare -x GAZEBO_RESOURCE_PATH="/usr/share/drcsim-2.0/worlds:/usr/share/gazebo-1.4:/usr/share/gazebo_models"
+declare -x HOME="/var/lib/jenkins"
+declare -x HUDSON_COOKIE="deeb6690-2db1-4b9e-a7ac-01ab01b3c900"
+declare -x HUDSON_HOME="/mnt/jenkins"
+declare -x HUDSON_SERVER_COOKIE="24493471c661e9ec"
+declare -x HUDSON_URL="http://107.23.158.13:8080/"
+declare -x JENKINS_HOME="/mnt/jenkins"
+declare -x JENKINS_SERVER_COOKIE="24493471c661e9ec"
+declare -x JENKINS_URL="http://107.23.158.13:8080/"
+declare -x JOB="arikBuild"
+declare -x JOB_NAME="Test01-skill4test"
+declare -x JOB_URL="http://107.23.158.13:8080/job/Test01-skill4test/"
+declare -x LD_LIBRARY_PATH="/opt/ros/fuerte/lib:/usr/lib/gazebo-1.4/plugins:/usr/lib/drcsim-2.0/plugins:/opt/ros/fuerte/lib:/opt/ros/fuerte/lib:/usr/lib/jvm/java-6-openjdk-amd64/jre/lib/amd64/server:/usr/lib/jvm/java-6-openjdk-amd64/jre/lib/amd64:/usr/lib/jvm/java-6-openjdk-amd64/jre/../lib/amd64"
+declare -x NODE_LABELS="master"
+declare -x NODE_NAME="master"
+declare -x OGRE_RESOURCE_PATH="/usr/lib/x86_64-linux-gnu/OGRE-1.7.4"
+declare -x OLDPWD=""
+declare -x OLDPWDBAK=""
+declare -x PATH="/opt/ros/fuerte/bin:/opt/ros/fuerte/bin:/usr/local/sbin:/usr/local/bin:/usr/bin:/usr/sbin:/sbin:/bin"
+declare -x PKG_CONFIG_PATH="/opt/ros/fuerte/lib/pkgconfig:/opt/ros/fuerte/lib/pkgconfig:"
+declare -x PWD="/mnt/jenkins/jobs/arikBuild/workspace"
+declare -x PYTHONPATH="/opt/ros/fuerte/lib/python2.7/dist-packages:/opt/ros/fuerte/lib/python2.7/dist-packages:"
+declare -x ROSLISP_PACKAGE_DIRECTORY="/opt/ros/fuerte/share/common-lisp/ros"
+declare -x ROS_DISTRO="fuerte"
+declare -x ROS_ETC_DIR="/opt/ros/fuerte/etc/ros"
+declare -x ROS_MASTER_URI="http://localhost:11311"
+declare -x ROS_PACKAGE_PATH="/usr/share/osrf-common-1.0/ros:/usr/share/drcsim-2.0/ros:/usr/share/sandia-hand-5.1/ros:/usr/share/drcsim-2.0/ros:/usr/share/drcsim-2.0/gazebo_models/irobot_hand_description/irobot_hand:/usr/share/drcsim-2.0/gazebo_models/irobot_hand_description/irobot_hand_on_box:/usr/share/drcsim-2.0/gazebo_models/multisense_sl_description/multisense_sl_on_box:/usr/share/drcsim-2.0/gazebo_models/multisense_sl_description/multisense_sl_description:/usr/share/drcsim-2.0/gazebo_models/atlas_description/atlas_sandia_hands:/usr/share/drcsim-2.0/gazebo_models/atlas_description/atlas:/usr/share/drcsim-2.0/gazebo_models/atlas_description/atlas_irobot_hands:/usr/share/drcsim-2.0/gazebo_models/environments/standpipe:/usr/share/drcsim-2.0/gazebo_models/environments/drc_terrain:/usr/share/drcsim-2.0/gazebo_models/environments/drc_vehicle:/usr/share/drcsim-2.0/gazebo_models/environments/fire_hose:/usr/share/drcsim-2.0/gazebo_models/environments/golf_cart:/usr/share/drcsim-2.0/gazebo_models/environments/powerplant:/opt/ros/fuerte/share:/opt/ros/fuerte/stacks:/mnt/jenkins/jobs/arikBuild/workspace"
+declare -x ROS_ROOT="/opt/ros/fuerte/share/ros"
+declare -x ROS_WORKSPACE="/mnt/jenkins/jobs/arikBuild/workspace"
+declare -x SHLVL="1"
+declare -x SSH_AUTH_SOCK="/var/lib/jenkins/.ssh/agent.socket"
+declare -x TERM="linux"
+declare -x UPSTART_JOB="jenkins"
+declare -x WORKSPACE="/mnt/jenkins/jobs/arikBuild/workspace"
+Environment Variables have been set
+ 
+====================================
+Task 5. Execute test skill4_test1.sh
+====================================
+Start the skill4 test
+./skill4_test1_driving.sh: 10: ./skill4_test1_driving.sh: source: not found
+11535
+11546
+11555
+[31m[ERROR] [1363252349.238514156]: [registerPublisher] Failed to contact master at [10.0.0.51:11311].  Retrying...[0m
+rm: cannot remove `/mnt/jenkins/jobs/arikBuild/workspace/C0_Scripts/.perception.txt': No such file or directory
+Starting C21
+11582
+[31m[ERROR] [1363252359.474109774]: [registerPublisher] Failed to contact master at [10.0.0.51:11311].  Retrying...[0m
+Starting C22
+11592
+[31m[ERROR] [1363252362.474637381]: [registerPublisher] Failed to contact master at [10.0.0.51:11311].  Retrying...[0m
+Starting C24
+11602
+[31m[ERROR] [1363252365.239394344]: [registerPublisher] Failed to contact master at [10.0.0.51:11311].  Retrying...[0m
+Starting C25
+11612
+[31m[ERROR] [1363252368.247094221]: [registerPublisher] Failed to contact master at [10.0.0.51:11311].  Retrying...[0m
+rm: cannot remove `/mnt/jenkins/jobs/arikBuild/workspace/C0_Scripts/.killwithobjectrec.txt': No such file or directory
+Starting C23
+11623
+Done 
+[31m[ERROR] [1363252369.502890017]: [registerPublisher] Failed to contact master at [10.0.0.51:11311].  Retrying...[0m
+ERROR: Unable to communicate with master!
+ERROR: Unable to communicate with master!
+ERROR: Unable to communicate with master!
+ERROR: Unable to communicate with master!
+ERROR: Unable to communicate with master!
+11648
+[31m[ERROR] [1363252375.688581297]: [registerPublisher] Failed to contact master at [10.0.0.51:11311].  Retrying...[0m
+ERROR: Unable to communicate with master!
+ERROR: Unable to communicate with master!
+Process leaked file descriptors. See http://wiki.jenkins-ci.org/display/JENKINS/Spawning+processes+from+build for more information
+Build step 'Execute shell' marked build as failure
+Terminating xvnc.
+$ vncserver -kill :10
+Killing Xvnc4 process ID 11390
+Finished: FAILURE

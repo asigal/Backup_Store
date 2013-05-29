@@ -1,0 +1,12 @@
+# Parse Rules for Builds. Written on Thu Mar 14 11:02:51 UTC 2013
+# OK Paragraph
+ok /Warning : There are multiple branch changesets here/
+             
+# Errors Paragraph
+error /Error/
+error /error/
+             
+# Warnings Paragraph
+warning /[Ww]arning/
+# Info Paragraph
+info /Starting >>> C[0-9]+_/

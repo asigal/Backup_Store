@@ -1,0 +1,13 @@
+<l:dependencies xmlns:l='licenses'>
+  <l:dependency name='Git Parameter Plug-In' groupId='org.jenkins-ci.plugins' artifactId='git-parameter' version='0.2' url='https://github.com/lukanus/git-parameter'>
+    <l:description />
+  </l:dependency>
+  <l:dependency name='jgit' groupId='org.spearce' artifactId='jgit' version='0.4-47e4af3' url='http://repo.or.cz/w/egit.git'>
+    <l:description>Pure Java implementation of Git</l:description>
+    <l:license name='3-clause (new-style) BSD license.' />
+  </l:dependency>
+  <l:dependency name='JSch' groupId='com.jcraft' artifactId='jsch' version='0.1.38' url='http://www.jcraft.com/jsch/'>
+    <l:description>JSch is a pure Java implementation of SSH2</l:description>
+    <l:license name='BSD' url='http://www.jcraft.com/jsch/LICENSE.txt' />
+  </l:dependency>
+</l:dependencies>

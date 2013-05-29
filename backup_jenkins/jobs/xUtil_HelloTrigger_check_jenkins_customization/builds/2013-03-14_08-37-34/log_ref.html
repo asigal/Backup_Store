@@ -1,0 +1,32 @@
+<html>
+	<head>
+		<link type="text/css" rel="stylesheet" href="http://107.23.158.13:8080/css/style.css"></link>
+		<link type="text/css" rel="stylesheet" href="http://107.23.158.13:8080/css/color.css"></link>
+	</head>
+	<body>
+<base target="content">
+<script language="JavaScript" type="text/javascript">
+	function toggleList(list){
+		element = document.getElementById(list).style;
+		element.display == 'none' ? element.display='block' : element.display='none';
+	}
+</script>
+<img src="http://107.23.158.13:8080///plugin/log-parser/images/red.gif" style="margin: 2px;" width="24" alt="" height="24"></img>
+<a href="javascript:toggleList('Error')" target="_self"><STRONG>Error (0)</STRONG></a><br/>
+<ul id="Error" type="disc" style="display:none">
+</ul>
+<img src="http://107.23.158.13:8080///plugin/log-parser/images/yellow.gif" style="margin: 2px;" width="24" alt="" height="24"></img>
+<a href="javascript:toggleList('Warning')" target="_self"><STRONG>Warning (3)</STRONG></a><br/>
+<ul id="Warning" type="disc" style="display:none">
+ <a target="content" href="log_content.html">Beginning of log</a>
+<br/>(3 Warnings in this section)<br/>
+<li>1 <a target="content" href="log_content.html#WARNING1"><font color="orange">Warning : There are multiple branch changesets here</font></a></li><br/>
+<li>2 <a target="content" href="log_content.html#WARNING2"><font color="orange">+ echo It has warning</font></a></li><br/>
+<li>3 <a target="content" href="log_content.html#WARNING3"><font color="orange">It has warning</font></a></li><br/>
+</ul>
+<img src="http://107.23.158.13:8080///plugin/log-parser/images/blue.gif" style="margin: 2px;" width="24" alt="" height="24"></img>
+<a href="javascript:toggleList('Info')" target="_self"><STRONG>Info (0)</STRONG></a><br/>
+<ul id="Info" type="disc" style="display:none">
+</ul>
+	</body>
+</html>

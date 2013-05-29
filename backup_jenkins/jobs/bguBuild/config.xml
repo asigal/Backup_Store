@@ -1,0 +1,167 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<project>
+  <actions/>
+  <description>This job serves to build iai robil repository&#xd;
+&lt;li&gt;Task 1. Get robil - last commit files - from Github&#xd;
+&lt;li&gt;Task 2. Init ROS workspace&#xd;
+&lt;li&gt;Task 3. Build all&#xd;
+&lt;li&gt;Taak 4. Make a note on GitHub with the build result: Failed / Warnings / Successful&#xd;
+</description>
+  <logRotator>
+    <daysToKeep>-1</daysToKeep>
+    <numToKeep>4</numToKeep>
+    <artifactDaysToKeep>-1</artifactDaysToKeep>
+    <artifactNumToKeep>-1</artifactNumToKeep>
+  </logRotator>
+  <keepDependencies>false</keepDependencies>
+  <properties>
+    <com.coravy.hudson.plugins.github.GithubProjectProperty>
+      <projectUrl>http://github.com/g-kovelman/robil/</projectUrl>
+    </com.coravy.hudson.plugins.github.GithubProjectProperty>
+  </properties>
+  <scm class="hudson.plugins.git.GitSCM">
+    <configVersion>2</configVersion>
+    <userRemoteConfigs>
+      <hudson.plugins.git.UserRemoteConfig>
+        <name>origin</name>
+        <refspec>+refs/heads/master:refs/remotes/origin/master</refspec>
+        <url>git@github.com:g-kovelman/robil.git</url>
+      </hudson.plugins.git.UserRemoteConfig>
+    </userRemoteConfigs>
+    <branches>
+      <hudson.plugins.git.BranchSpec>
+        <name>**</name>
+      </hudson.plugins.git.BranchSpec>
+    </branches>
+    <disableSubmodules>false</disableSubmodules>
+    <recursiveSubmodules>false</recursiveSubmodules>
+    <doGenerateSubmoduleConfigurations>false</doGenerateSubmoduleConfigurations>
+    <authorOrCommitter>false</authorOrCommitter>
+    <clean>false</clean>
+    <wipeOutWorkspace>false</wipeOutWorkspace>
+    <pruneBranches>false</pruneBranches>
+    <remotePoll>false</remotePoll>
+    <ignoreNotifyCommit>false</ignoreNotifyCommit>
+    <useShallowClone>false</useShallowClone>
+    <buildChooser class="hudson.plugins.git.util.DefaultBuildChooser"/>
+    <gitTool>Default</gitTool>
+    <submoduleCfg class="list"/>
+    <relativeTargetDir></relativeTargetDir>
+    <reference></reference>
+    <excludedRegions></excludedRegions>
+    <excludedUsers></excludedUsers>
+    <gitConfigName></gitConfigName>
+    <gitConfigEmail></gitConfigEmail>
+    <skipTag>true</skipTag>
+    <includedRegions></includedRegions>
+    <scmName></scmName>
+  </scm>
+  <canRoam>true</canRoam>
+  <disabled>false</disabled>
+  <blockBuildWhenDownstreamBuilding>false</blockBuildWhenDownstreamBuilding>
+  <blockBuildWhenUpstreamBuilding>false</blockBuildWhenUpstreamBuilding>
+  <triggers class="vector">
+    <com.cloudbees.jenkins.GitHubPushTrigger>
+      <spec></spec>
+    </com.cloudbees.jenkins.GitHubPushTrigger>
+  </triggers>
+  <concurrentBuild>false</concurrentBuild>
+  <builders>
+    <hudson.tasks.Shell>
+      <command>#!/bin/bash 
+
+echo &quot; &quot;
+echo &quot;Build Visit Card&quot;
+echo =========================
+echo &quot;Date:      `date`&quot;
+echo &quot;Team:      ${JOB_NAME}&quot;
+echo &quot;Buiild no  ${BUILD_NUMBER}&quot;
+echo =========================
+git log -1
+
+echo &quot; &quot;
+echo Task 1 - Init workspace as ROS workspace
+echo =========================
+echo Init ROS workspace
+echo =========================
+if [ ! -s ${WORKSPACE}/.rosinstall ] ; then
+    . /opt/ros/fuerte/setup.sh
+    rosws init `pwd` /opt/ros/fuerte
+    chmod u+x ${WORKSPACE}/setup.sh
+    chmod u+x ${WORKSPACE}/setup.bash
+    ls -l
+else
+    echo Skiped...
+fi
+
+echo &quot; &quot;
+echo Task 2 - Setup ROS environment
+echo =====================
+echo Setup ROS environment
+echo =====================
+if [ &quot;`echo ${ROS_PACKAGE_PATH} | grep ${WORKSPACE}`&quot; = &quot;&quot; ] ; then
+    . ${WORKSPACE}/setup.bash
+    export ROS_PACKAGE_PATH=${ROS_PACKAGE_PATH}:/usr/share/osrf-common-1.0/ros/osrf_msgs:/opt/additional:${WORKSPACE}
+    export | grep ROS 
+else
+    echo Skiped...
+fi
+
+echo &quot; &quot;
+echo Task 3 - Build robil
+echo =========
+echo Build all
+echo =========
+if [ &quot;EXEC&quot; = &quot;EXEC&quot; ] ; then
+    cd C0_Scripts
+    ./all_make.sh
+else
+    echo Skiped...
+fi
+
+</command>
+    </hudson.tasks.Shell>
+  </builders>
+  <publishers>
+    <hudson.plugins.logparser.LogParserPublisher>
+      <unstableOnWarning>false</unstableOnWarning>
+      <failBuildOnError>false</failBuildOnError>
+      <parsingRulesPath>/mnt/jenkins/rules4build.txt</parsingRulesPath>
+    </hudson.plugins.logparser.LogParserPublisher>
+    <hudson.plugins.parameterizedtrigger.BuildTrigger>
+      <configs>
+        <hudson.plugins.parameterizedtrigger.BuildTriggerConfig>
+          <configs>
+            <hudson.plugins.parameterizedtrigger.PredefinedBuildParameters>
+              <properties>BUILD_WORKSPACE=${WORKSPACE}</properties>
+            </hudson.plugins.parameterizedtrigger.PredefinedBuildParameters>
+          </configs>
+          <projects>xUtil_add_note_build_finished_with_errors</projects>
+          <condition>FAILED</condition>
+          <triggerWithNoParameters>false</triggerWithNoParameters>
+        </hudson.plugins.parameterizedtrigger.BuildTriggerConfig>
+        <hudson.plugins.parameterizedtrigger.BuildTriggerConfig>
+          <configs>
+            <hudson.plugins.parameterizedtrigger.PredefinedBuildParameters>
+              <properties>BUILD_WORKSPACE=${WORKSPACE}</properties>
+            </hudson.plugins.parameterizedtrigger.PredefinedBuildParameters>
+          </configs>
+          <projects>xUtil_add_note_build_finished_with_warning</projects>
+          <condition>UNSTABLE</condition>
+          <triggerWithNoParameters>false</triggerWithNoParameters>
+        </hudson.plugins.parameterizedtrigger.BuildTriggerConfig>
+        <hudson.plugins.parameterizedtrigger.BuildTriggerConfig>
+          <configs>
+            <hudson.plugins.parameterizedtrigger.PredefinedBuildParameters>
+              <properties>BUILD_WORKSPACE=${WORKSPACE}</properties>
+            </hudson.plugins.parameterizedtrigger.PredefinedBuildParameters>
+          </configs>
+          <projects>xUtil_add_note_build_finished_ok</projects>
+          <condition>SUCCESS</condition>
+          <triggerWithNoParameters>false</triggerWithNoParameters>
+        </hudson.plugins.parameterizedtrigger.BuildTriggerConfig>
+      </configs>
+    </hudson.plugins.parameterizedtrigger.BuildTrigger>
+  </publishers>
+  <buildWrappers/>
+</project>

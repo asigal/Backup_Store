@@ -1,0 +1,8 @@
+Started by upstream project "[8mha:AAAAnR+LCAAAAAAAAABb85aBtbiIQTGjNKU4P08vOT+vOD8nVc83PyU1x6OyILUoJzMv2y+/JJUBAhiZGBgqihhk0NSjKDWzXb3RdlLBUSYGJk8GtpzUvPSSDB8G5tKinBIGIZ+sxLJE/ZzEvHT94JKizLx0a6BxUmjGOUNodHsLgAweoBn6WflJ+h6pOTn5IUWZ6empRfoARaIr7McAAAA=[0mHelloTrigger" build number [8mha:AAAAoB+LCAAAAAAAAABb85aBtbiIQTGjNKU4P08vOT+vOD8nVc83PyU1x6OyILUoJzMv2y+/JJUBAhiZGBgqihhk0NSjKDWzXb3RdlLBUSYGJk8GtpzUvPSSDB8G5tKinBIGIZ+sxLJE/ZzEvHT94JKizLx0a6BxUmjGOUNodHsLgAymEgYR/az8JH2P1Jyc/JCizPT01CJ9Q0sAwmNa+ckAAAA=[0m19
+Building in workspace /mnt/jenkins/jobs/xUtil_add_note_build_finished_with_warning/workspace
+[workspace] $ /bin/sh -xe /tmp/hudson3501783006440237468.sh
++ cd
++ git fetch -f origin refs/notes/*:refs/notes/*
+fatal: Not a git repository (or any of the parent directories): .git
+Build step 'Execute shell' marked build as failure
+Finished: FAILURE

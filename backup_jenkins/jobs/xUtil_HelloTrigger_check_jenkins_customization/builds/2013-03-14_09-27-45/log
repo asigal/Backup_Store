@@ -1,0 +1,30 @@
+Started by user [8mha:AAAAnR+LCAAAAAAAAABb85aBtbiIQTGjNKU4P08vOT+vOD8nVc83PyU1x6OyILUoJzMv2y+/JJUBAhiZGBgqihhk0NSjKDWzXb3RdlLBUSYGJk8GtpzUvPSSDB8G5tKinBIGIZ+sxLJE/ZzEvHT94JKizLx0a6BxUmjGOUNodHsLgAxeoBn6pcWpRfpB+UmZOV6pedmZecUAux4198cAAAA=[0mRobil Jenkins
+Building in workspace /mnt/jenkins/jobs/HelloTrigger/workspace
+Checkout:workspace / /mnt/jenkins/jobs/HelloTrigger/workspace - hudson.remoting.LocalChannel@37a7481f
+Using strategy: Default
+Last Built Revision: Revision 328c66de9b72fad8a610c489d21be6fa752f441a (origin/master, origin/HEAD)
+Fetching changes from 1 remote Git repository
+Fetching upstream changes from origin
+Seen branch in repository origin/HEAD
+Seen branch in repository origin/master
+Commencing build of Revision 328c66de9b72fad8a610c489d21be6fa752f441a (origin/master, origin/HEAD)
+Checking out Revision 328c66de9b72fad8a610c489d21be6fa752f441a (origin/master, origin/HEAD)
+Warning : There are multiple branch changesets here
+[workspace] $ /bin/sh -xe /tmp/hudson7661892856420156441.sh
++ echo Hello Trigger!
+Hello Trigger!
++ export
++ grep SSH_AUTH_SOCK
+export SSH_AUTH_SOCK='/var/lib/jenkins/.ssh/agent.socket'
++ git fetch -f origin refs/notes/*:refs/notes/*
++ date
++ git notes add -fm This is a note added manually at Thu Mar 14 09:27:46 UTC 2013 328c66de9b72fad8a610c489d21be6fa752f441a
+Overwriting existing notes for object 328c66de9b72fad8a610c489d21be6fa752f441a
++ git push origin refs/notes/*:refs/notes/*
+To git@github.com:RobilJenkins/HelloWorld.git
+   a406783..ed5eb07  refs/notes/commits -> refs/notes/commits
++ echo This is an error
+This is an error
+Build step 'Console output (build log) parsing' changed build result to FAILURE
+Triggering a new build of [8mha:AAAAuR+LCAAAAAAAAABdjTEOwjAQBI8geAAloqGkiTsalIoGpECDqK0Em9jhdI7ODoRv8A1oeATP4Q9ESkW22S1Gs68vjDzD3NTKO4pPjrxDHe+c0ri5V5rR0mXvgoYugwigYZj1+D90mTzfyaP6RBBtYYyaimBSGNaMASZpmV0zgRkV4hDYUrFqddOebt11/7dqxyKAEKXLRXMMFmWmlKQWk3ltUcmzJeuNVvJmg5Ga2bEXP9iixQPkAAAA[0mxUtil_add_note_build_finished_with_errors #1
+Finished: FAILURE

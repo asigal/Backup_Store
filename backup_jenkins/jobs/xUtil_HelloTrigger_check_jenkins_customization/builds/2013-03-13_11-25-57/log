@@ -1,0 +1,16 @@
+Started by user [8mha:AAAAnR+LCAAAAAAAAABb85aBtbiIQTGjNKU4P08vOT+vOD8nVc83PyU1x6OyILUoJzMv2y+/JJUBAhiZGBgqihhk0NSjKDWzXb3RdlLBUSYGJk8GtpzUvPSSDB8G5tKinBIGIZ+sxLJE/ZzEvHT94JKizLx0a6BxUmjGOUNodHsLgAxeoBn6pcWpRfpB+UmZOV6pedmZecUAux4198cAAAA=[0mRobil Jenkins
+Building in workspace /var/lib/jenkins/jobs/HelloTrigger/workspace
+Checkout:workspace / /var/lib/jenkins/jobs/HelloTrigger/workspace - hudson.remoting.LocalChannel@5706937e
+Using strategy: Default
+Fetching changes from 1 remote Git repository
+Fetching upstream changes from origin
+Seen branch in repository origin/HEAD
+Seen branch in repository origin/master
+Commencing build of Revision d4847482d6430a3ecb517f534e5ec7b15c34a133 (origin/master, origin/HEAD)
+Checking out Revision d4847482d6430a3ecb517f534e5ec7b15c34a133 (origin/master, origin/HEAD)
+No change to record in branch origin/master
+No change to record in branch origin/HEAD
+[workspace] $ /bin/sh -xe /tmp/hudson8798372107886744214.sh
++ echo Hello Trigger!
+Hello Trigger!
+Finished: SUCCESS

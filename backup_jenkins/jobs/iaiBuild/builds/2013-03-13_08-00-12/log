@@ -1,0 +1,27 @@
+Started by user [8mha:AAAAnR+LCAAAAAAAAABb85aBtbiIQTGjNKU4P08vOT+vOD8nVc83PyU1x6OyILUoJzMv2y+/JJUBAhiZGBgqihhk0NSjKDWzXb3RdlLBUSYGJk8GtpzUvPSSDB8G5tKinBIGIZ+sxLJE/ZzEvHT94JKizLx0a6BxUmjGOUNodHsLgAxeoBn6pcWpRfpB+UmZOV6pedmZecUAux4198cAAAA=[0mRobil Jenkins
+Building in workspace /var/lib/jenkins/jobs/iaiBuild/workspace
+Checkout:workspace / /var/lib/jenkins/jobs/iaiBuild/workspace - hudson.remoting.LocalChannel@69ac44c2
+Using strategy: Default
+Fetching changes from 1 remote Git repository
+Fetching upstream changes from origin
+Seen branch in repository origin/HEAD
+Seen branch in repository origin/master
+Commencing build of Revision 9f28a9384ff56dd488a834df2658d03e48d7a926 (origin/master, origin/HEAD)
+Checking out Revision 9f28a9384ff56dd488a834df2658d03e48d7a926 (origin/master, origin/HEAD)
+No change to record in branch origin/master
+No change to record in branch origin/HEAD
+[workspace] $ /bin/bash /tmp/hudson4354338535747832021.sh
+ 
+Build Visit Card
+=========================
+Date:      Wed Mar 13 08:00:14 UTC 2013
+Team:      iaiBuild
+Buiild no  11
+=========================
+commit 9f28a9384ff56dd488a834df2658d03e48d7a926
+Author: DimitryB <yadima10@gmail.com>
+Date:   Tue Mar 12 14:39:40 2013 +0200
+
+    Grid updated
+    Route updated
+Finished: SUCCESS

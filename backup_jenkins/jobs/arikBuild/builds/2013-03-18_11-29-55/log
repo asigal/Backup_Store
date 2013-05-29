@@ -1,0 +1,48 @@
+Started by user [8mha:AAAAnR+LCAAAAAAAAABb85aBtbiIQTGjNKU4P08vOT+vOD8nVc83PyU1x6OyILUoJzMv2y+/JJUBAhiZGBgqihhk0NSjKDWzXb3RdlLBUSYGJk8GtpzUvPSSDB8G5tKinBIGIZ+sxLJE/ZzEvHT94JKizLx0a6BxUmjGOUNodHsLgAxeoBn6pcWpRfpB+UmZOV6pedmZecUAux4198cAAAA=[0mRobil Jenkins
+Building in workspace /mnt/jenkins/jobs/arikBuild/workspace
+Checkout:workspace / /mnt/jenkins/jobs/arikBuild/workspace - hudson.remoting.LocalChannel@533db2fd
+Using strategy: Default
+Last Built Revision: Revision 5890af2a9a8060ebb23e827ca996af6a2e672bae (origin/master, origin/HEAD)
+Fetching changes from 1 remote Git repository
+Fetching upstream changes from origin
+Seen branch in repository origin/HEAD
+Seen branch in repository origin/master
+Commencing build of Revision 5890af2a9a8060ebb23e827ca996af6a2e672bae (origin/master, origin/HEAD)
+Checking out Revision 5890af2a9a8060ebb23e827ca996af6a2e672bae (origin/master, origin/HEAD)
+Warning : There are multiple branch changesets here
+[workspace] $ /bin/bash /tmp/hudson8408463064240793088.sh
+ 
+Build Visit Card
+=========================
+Date:      Mon Mar 18 11:29:55 UTC 2013
+Team:      arikBuild
+Buiild no  7
+=========================
+commit 5890af2a9a8060ebb23e827ca996af6a2e672bae
+Author: DimitryB <yadima10@gmail.com>
+Date:   Mon Mar 18 13:28:47 2013 +0200
+
+    upgrade #2 skill4_test2
+
+Notes:
+    Build finished OK
+ 
+Task 1 - Init workspace as ROS workspace
+=========================
+Init ROS workspace
+=========================
+Skiped...
+ 
+Task 2 - Setup ROS environment
+=====================
+Setup ROS environment
+=====================
+declare -x ROSLISP_PACKAGE_DIRECTORY="/opt/ros/fuerte/share/common-lisp/ros"
+declare -x ROS_DISTRO="fuerte"
+declare -x ROS_ETC_DIR="/opt/ros/fuerte/etc/ros"
+declare -x ROS_MASTER_URI="http://localhost:11311"
+declare -x ROS_PACKAGE_PATH="/opt/ros/fuerte/stacks:/opt/ros/fuerte/share:/opt/ros/fuerte/share/ros:/usr/share/osrf-common-1.0/ros/osrf_msgs:/opt/additional:/mnt/jenkins/jobs/arikBuild/workspace"
+declare -x ROS_ROOT="/opt/ros/fuerte/share/ros"
+declare -x ROS_WORKSPACE="/mnt/jenkins/jobs/arikBuild/workspace"
+[8mha:AAAAsR+LCAAAAAAAAABb85aBtbiIQTGjNKU4P08vOT+vOD8nVc83PyU1x6OyILUoJzMv2y+/JJUBAhiZGBgqihhk0NSjKDWzXb3RdlLBUSYGJk8GtpzUvPSSDB8G5tKinBIGIZ+sxLJE/ZzEvHT94JKizLx0a6BxUmjGOUNodHsLgAyFEgY1/az8JP2K0JLMnPjElJT4PKCy+KTSzJyU+LTMvMzijNSU+PxsfQC5pu9S2wAAAA==[0mxUtil_add_note_build_finished_ok #10 is already in the queue
+Finished: SUCCESS

@@ -1,0 +1,40 @@
+Started by user [8mha:AAAAnR+LCAAAAAAAAABb85aBtbiIQTGjNKU4P08vOT+vOD8nVc83PyU1x6OyILUoJzMv2y+/JJUBAhiZGBgqihhk0NSjKDWzXb3RdlLBUSYGJk8GtpzUvPSSDB8G5tKinBIGIZ+sxLJE/ZzEvHT94JKizLx0a6BxUmjGOUNodHsLgAxeoBn6pcWpRfpB+UmZOV6pedmZecUAux4198cAAAA=[0mRobil Jenkins
+Building in workspace /mnt/jenkins/jobs/HelloTrigger/workspace
+Checkout:workspace / /mnt/jenkins/jobs/HelloTrigger/workspace - hudson.remoting.LocalChannel@4b40de18
+Using strategy: Default
+Last Built Revision: Revision 328c66de9b72fad8a610c489d21be6fa752f441a (origin/master, origin/HEAD)
+Fetching changes from 1 remote Git repository
+Fetching upstream changes from origin
+Seen branch in repository origin/HEAD
+Seen branch in repository origin/master
+Commencing build of Revision 328c66de9b72fad8a610c489d21be6fa752f441a (origin/master, origin/HEAD)
+Checking out Revision 328c66de9b72fad8a610c489d21be6fa752f441a (origin/master, origin/HEAD)
+Warning : There are multiple branch changesets here
+[workspace] $ /bin/sh -xe /tmp/hudson119229315862426215.sh
++ echo Hello Trigger!
+Hello Trigger!
++ export
++ grep SSH_AUTH_SOCK
+export SSH_AUTH_SOCK='/var/lib/jenkins/.ssh/agent.socket'
++ git fetch -f origin refs/notes/*:refs/notes/*
++ echo GIT_COMMIT = 328c66de9b72fad8a610c489d21be6fa752f441a
+GIT_COMMIT = 328c66de9b72fad8a610c489d21be6fa752f441a
+git-notes plugin: building new notes hash
+git-notes plugin: updating git notes
+git-notes plugin: fetching notes
+git-notes plugin: running command "git fetch -f origin refs/notes/*:refs/notes/*" with opts {:raise=>true}
+[workspace] $ git fetch -f origin refs/notes/*:refs/notes/*
+ERROR: Unexpected exit code (128): command: "git fetch -f origin refs/notes/*:refs/notes/*": result: {:out=>"", :err=>"Permission denied (publickey).\r\nfatal: The remote end hung up unexpectedly\n", :val=>128} (RuntimeError)
+/mnt/jenkins/plugins/git-notes/WEB-INF/classes/lib/build_participant.rb:56:in `run'
+/mnt/jenkins/plugins/git-notes/WEB-INF/classes/lib/git_updater.rb:20:in `fetch_notes'
+/mnt/jenkins/plugins/git-notes/WEB-INF/classes/lib/git_updater.rb:12:in `update!'
+/mnt/jenkins/plugins/git-notes/WEB-INF/classes/models/git_notes_publisher.rb:36:in `perform'
+org/jruby/RubyProc.java:258:in `call'
+/mnt/jenkins/plugins/git-notes/WEB-INF/classes/lib/build_context.rb:14:in `set'
+/mnt/jenkins/plugins/git-notes/WEB-INF/classes/models/git_notes_publisher.rb:30:in `perform'
+/mnt/jenkins/plugins/git-notes/WEB-INF/classes/vendor/gems/gems/jenkins-plugin-runtime-0.1.27/lib/jenkins/plugin/proxies/build_step.rb:14:in `perform'
+/mnt/jenkins/plugins/git-notes/WEB-INF/classes/vendor/gems/gems/jenkins-plugin-runtime-0.1.27/lib/jenkins/plugin/proxies/build_step.rb:22:in `boolean_result'
+/mnt/jenkins/plugins/git-notes/WEB-INF/classes/vendor/gems/gems/jenkins-plugin-runtime-0.1.27/lib/jenkins/plugin/proxies/build_step.rb:13:in `perform'
+
+[8mha:AAAAWB+LCAAAAAAAAABb85aBtbiIQSmjNKU4P08vOT+vOD8nVc8DzHWtSE4tKMnMz/PLL0ldFVf2c+b/lb5MDAwVRQxSaBqcITRIIQMEMIIUFgAAckCEiWAAAAA=[0mBuild step 'Publish build result as git-notes' marked build as failure
+Finished: FAILURE

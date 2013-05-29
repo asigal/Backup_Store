@@ -1,0 +1,49 @@
+Started by user [8mha:AAAAnR+LCAAAAAAAAABb85aBtbiIQTGjNKU4P08vOT+vOD8nVc83PyU1x6OyILUoJzMv2y+/JJUBAhiZGBgqihhk0NSjKDWzXb3RdlLBUSYGJk8GtpzUvPSSDB8G5tKinBIGIZ+sxLJE/ZzEvHT94JKizLx0a6BxUmjGOUNodHsLgAxeoBn6pcWpRfpB+UmZOV6pedmZecUAux4198cAAAA=[0mRobil Jenkins
+Building in workspace /var/lib/jenkins/jobs/HelloTrigger/workspace
+Checkout:workspace / /var/lib/jenkins/jobs/HelloTrigger/workspace - hudson.remoting.LocalChannel@5706937e
+Using strategy: Default
+Cloning the remote Git repository
+Cloning repository git@github.com:RobilJenkins/HelloWorld.git
+git --version
+git version 1.7.9.5
+Fetching upstream changes from origin
+Seen branch in repository origin/HEAD
+Seen branch in repository origin/master
+Commencing build of Revision d4847482d6430a3ecb517f534e5ec7b15c34a133 (origin/HEAD, origin/master)
+Checking out Revision d4847482d6430a3ecb517f534e5ec7b15c34a133 (origin/HEAD, origin/master)
+FATAL: Could not apply tag jenkins-HelloTrigger-1
+[8mha:AAAAWB+LCAAAAAAAAABb85aBtbiIQSmjNKU4P08vOT+vOD8nVc8DzHWtSE4tKMnMz/PLL0ldFVf2c+b/lb5MDAwVRQxSaBqcITRIIQMEMIIUFgAAckCEiWAAAAA=[0mhudson.plugins.git.GitException: Could not apply tag jenkins-HelloTrigger-1
+	at org.jenkinsci.plugins.gitclient.CliGitAPIImpl.tag(CliGitAPIImpl.java:709)
+	at hudson.plugins.git.GitSCM$4.invoke(GitSCM.java:1251)
+	at hudson.plugins.git.GitSCM$4.invoke(GitSCM.java:1208)
+	at hudson.FilePath.act(FilePath.java:852)
+	at hudson.FilePath.act(FilePath.java:834)
+	at hudson.plugins.git.GitSCM.checkout(GitSCM.java:1208)
+	at hudson.model.AbstractProject.checkout(AbstractProject.java:1256)
+	at hudson.model.AbstractBuild$AbstractBuildExecution.defaultCheckout(AbstractBuild.java:590)
+	at jenkins.scm.SCMCheckoutStrategy.checkout(SCMCheckoutStrategy.java:88)
+	at hudson.model.AbstractBuild$AbstractBuildExecution.run(AbstractBuild.java:495)
+	at hudson.model.Run.execute(Run.java:1502)
+	at hudson.model.FreeStyleBuild.run(FreeStyleBuild.java:46)
+	at hudson.model.ResourceController.execute(ResourceController.java:88)
+	at hudson.model.Executor.run(Executor.java:237)
+Caused by: hudson.plugins.git.GitException: Command "git tag -a -f -m Jenkins Build #1 jenkins-HelloTrigger-1" returned status code 128:
+stdout: 
+stderr: 
+*** Please tell me who you are.
+
+Run
+
+  git config --global user.email "you@example.com"
+  git config --global user.name "Your Name"
+
+to set your account's default identity.
+Omit --global to set the identity only in this repository.
+
+fatal: empty ident  <jenkins@ip-10-0-0-52.(none)> not allowed
+
+	at org.jenkinsci.plugins.gitclient.CliGitAPIImpl.launchCommandIn(CliGitAPIImpl.java:772)
+	at org.jenkinsci.plugins.gitclient.CliGitAPIImpl.launchCommand(CliGitAPIImpl.java:738)
+	at org.jenkinsci.plugins.gitclient.CliGitAPIImpl.launchCommand(CliGitAPIImpl.java:748)
+	at org.jenkinsci.plugins.gitclient.CliGitAPIImpl.tag(CliGitAPIImpl.java:707)
+	... 13 more

@@ -1,0 +1,141 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<project>
+  <actions/>
+  <description>Test01&#xd;
+&lt;li&gt;Purpose:   Tests what originaly was testing skill4test.sh&#xd;
+&lt;li&gt;Execution: The test will be exercuted on the workspace specified in the [JOB] parameter&#xd;
+&lt;li&gt;Parameter [JOB]:  This is the name of a build job.  Eg: biuBuild, bgnBuild, iaiBuild</description>
+  <logRotator>
+    <daysToKeep>-1</daysToKeep>
+    <numToKeep>4</numToKeep>
+    <artifactDaysToKeep>-1</artifactDaysToKeep>
+    <artifactNumToKeep>-1</artifactNumToKeep>
+  </logRotator>
+  <keepDependencies>false</keepDependencies>
+  <properties>
+    <hudson.model.ParametersDefinitionProperty>
+      <parameterDefinitions>
+        <hudson.model.StringParameterDefinition>
+          <name>JOB</name>
+          <description>Enter a build job name. Possible values are bguBuild, biuBuild, cogniBuild, iaiBuild &lt;br&gt;
+Jenkins will execute the test in the workspace belonging to the specified job. &lt;br&gt;
+Jenkins expects that the workspace already contains executables of the build job.</description>
+          <defaultValue></defaultValue>
+        </hudson.model.StringParameterDefinition>
+      </parameterDefinitions>
+    </hudson.model.ParametersDefinitionProperty>
+  </properties>
+  <scm class="hudson.scm.NullSCM"/>
+  <canRoam>true</canRoam>
+  <disabled>false</disabled>
+  <blockBuildWhenDownstreamBuilding>false</blockBuildWhenDownstreamBuilding>
+  <blockBuildWhenUpstreamBuilding>false</blockBuildWhenUpstreamBuilding>
+  <triggers class="vector"/>
+  <concurrentBuild>false</concurrentBuild>
+  <customWorkspace>${JENKINS_HOME}/jobs/${JOB}/workspace</customWorkspace>
+  <builders>
+    <hudson.tasks.Shell>
+      <command>#!/bin/bash 
+ulimit -c unlimited
+
+# =================================================
+# Check if build was executed and executables exist
+# If missing file then exit
+# =================================================
+test ! -s ./C34_Executer/bin/executer &amp;&amp; echo &quot;Missing C34_Executer/executer. Did you run the build ${JOB}?&quot;  &amp;&amp; exit
+
+
+echo &quot; &quot;
+echo &quot;Test Visit Card&quot;
+echo =============================================================
+echo &quot;Date:      `date`&quot;
+echo &quot;Test:      ${JOB_NAME}&quot;
+echo &quot;Workspace: ${WORKSPACE}&quot;
+echo -n &quot;Testing:   &quot; 
+git log -1
+echo =============================================================
+
+echo &quot; &quot;
+echo ==========================
+echo Task 1. Init ROS workspace
+echo ==========================
+if [ ! -s ${WORKSPACE}/.rosinstall ] ; then
+    . /opt/ros/fuerte/setup.sh
+    rosws init `pwd` /opt/ros/fuerte
+    chmod u+x ${WORKSPACE}/setup.sh
+    chmod u+x ${WORKSPACE}/setup.bash
+    ls -l
+else
+    echo Skipped...
+fi
+
+echo &quot; &quot;
+echo =============================
+echo Task 2. Setup ROS environment
+echo =============================
+if [ &quot;EXEC&quot; = &quot;EXEC&quot; ] ; then
+    . ${WORKSPACE}/setup.bash
+    export ROS_PACKAGE_PATH=${ROS_PACKAGE_PATH}:/opt/additional/:${WORKSPACE}
+    export | grep ROS 
+else
+    echo Skiped...
+fi
+
+echo &quot; &quot;
+echo =================
+echo Task 3. Build all
+echo =================
+if [ &quot;EXEC&quot; = &quot;NO&quot; ] ; then
+    cd C0_Scripts
+    ./all_make.sh
+else
+    echo Skiped...
+fi
+
+#echo &quot; &quot;
+#echo =============================
+#echo Task 4. Check of build success 
+#echo =============================
+#./logErrSearch1.pl
+#STATUS=$?
+
+#if [ $STATUS -ne 0 ]; then
+#       echo &quot;Build Error #&quot; $STATUS
+#       exit
+#else
+#        echo &quot;OK&quot;
+#fi
+
+echo &quot; &quot;
+echo ==================
+echo Task 5. Setup test 
+echo ==================
+if [ &quot;EXEC&quot; = &quot;EXEC&quot; ] ; then
+   . /usr/share/drcsim/setup.sh
+   export ROS_PACKAGE_PATH=&quot;$ROS_PACKAGE_PATH:${WORKSPACE}&quot;
+   export
+   echo &quot;Environment Variables have been set&quot;
+else
+   echo Skipped..
+fi
+
+echo &quot; &quot;
+echo ====================================
+echo Task 6. Execute test skill4_test1.sh
+echo ====================================
+if [ &quot;EXEC&quot; = &quot;EXEC&quot; ] ; then
+   . /home/ubuntu/cloudsim/ros.bash
+   cd ./C0_Scripts
+   ./skill4_test1_driving.sh
+else
+   echo Skipped..
+fi</command>
+    </hudson.tasks.Shell>
+  </builders>
+  <publishers/>
+  <buildWrappers>
+    <hudson.plugins.xvnc.Xvnc>
+      <takeScreenshot>false</takeScreenshot>
+    </hudson.plugins.xvnc.Xvnc>
+  </buildWrappers>
+</project>

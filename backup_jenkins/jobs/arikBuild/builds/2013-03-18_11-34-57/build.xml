@@ -1,0 +1,161 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<build>
+  <actions>
+    <hudson.plugins.logparser.LogParserAction>
+      <build class="build" reference="../../.."/>
+      <result>
+        <totalErrors>0</totalErrors>
+        <totalWarnings>0</totalWarnings>
+        <totalInfos>0</totalInfos>
+        <htmlLogFile>/mnt/jenkins/jobs/arikBuild/builds/2013-03-18_11-34-57/log_content.html</htmlLogFile>
+        <errorLinksFile>/mnt/jenkins/jobs/arikBuild/builds/2013-03-18_11-34-57/logerrorLinks.html</errorLinksFile>
+        <warningLinksFile>/mnt/jenkins/jobs/arikBuild/builds/2013-03-18_11-34-57/logwarningLinks.html</warningLinksFile>
+        <infoLinksFile>/mnt/jenkins/jobs/arikBuild/builds/2013-03-18_11-34-57/loginfoLinks.html</infoLinksFile>
+        <parsedLogURL>job/arikBuild/8/parsed_console/log.html</parsedLogURL>
+        <htmlLogPath>/mnt/jenkins/jobs/arikBuild/builds/2013-03-18_11-34-57</htmlLogPath>
+        <badParsingRulesError>
+Bad parsing rule:             , Error:1
+Bad parsing rule:             , Error:1</badParsingRulesError>
+      </result>
+    </hudson.plugins.logparser.LogParserAction>
+    <hudson.model.CauseAction>
+      <causes>
+        <com.cloudbees.jenkins.GitHubPushCause>
+          <pushedBy>asigal</pushedBy>
+        </com.cloudbees.jenkins.GitHubPushCause>
+      </causes>
+    </hudson.model.CauseAction>
+    <hudson.triggers.SCMTrigger_-BuildAction>
+      <build class="build" reference="../../.."/>
+    </hudson.triggers.SCMTrigger_-BuildAction>
+    <hudson.plugins.git.util.BuildData>
+      <buildsByBranchName>
+        <entry>
+          <string>origin/master</string>
+          <hudson.plugins.git.util.Build>
+            <revision>
+              <sha1>a70be05e1a5a8e21b4bf390a77af9e1d9e08541e</sha1>
+              <branches class="list">
+                <hudson.plugins.git.Branch>
+                  <sha1 reference="../../../sha1"/>
+                  <name>origin/master</name>
+                </hudson.plugins.git.Branch>
+                <hudson.plugins.git.Branch>
+                  <sha1 reference="../../../sha1"/>
+                  <name>origin/HEAD</name>
+                </hudson.plugins.git.Branch>
+              </branches>
+            </revision>
+            <hudsonBuildNumber>8</hudsonBuildNumber>
+          </hudson.plugins.git.util.Build>
+        </entry>
+        <entry>
+          <string>origin/HEAD</string>
+          <hudson.plugins.git.util.Build reference="../../entry/hudson.plugins.git.util.Build"/>
+        </entry>
+      </buildsByBranchName>
+      <lastBuild reference="../buildsByBranchName/entry/hudson.plugins.git.util.Build"/>
+      <scmName></scmName>
+      <remoteUrls>
+        <string>git@github.com:asigal/robil.git</string>
+      </remoteUrls>
+    </hudson.plugins.git.util.BuildData>
+    <hudson.plugins.git.GitTagAction>
+      <build class="build" reference="../../.."/>
+      <tags class="hudson.util.CopyOnWriteMap$Tree">
+        <no-comparator/>
+        <entry>
+          <string>origin/HEAD</string>
+          <list/>
+        </entry>
+        <entry>
+          <string>origin/master</string>
+          <list/>
+        </entry>
+      </tags>
+      <ws>/mnt/jenkins/jobs/arikBuild/workspace</ws>
+    </hudson.plugins.git.GitTagAction>
+    <hudson.scm.SCMRevisionState_-None/>
+    <hudson.plugins.parameterizedtrigger.CapturedEnvironmentAction>
+      <env serialization="custom">
+        <unserializable-parents/>
+        <tree-map>
+          <default>
+            <comparator class="hudson.util.CaseInsensitiveComparator"/>
+          </default>
+          <int>28</int>
+          <string>BUILD_ID</string>
+          <string>2013-03-18_11-34-57</string>
+          <string>BUILD_NUMBER</string>
+          <string>8</string>
+          <string>BUILD_TAG</string>
+          <string>jenkins-arikBuild-8</string>
+          <string>BUILD_URL</string>
+          <string>http://107.23.158.13:8080/job/arikBuild/8/</string>
+          <string>CLASSPATH</string>
+          <string></string>
+          <string>EXECUTOR_NUMBER</string>
+          <string>0</string>
+          <string>GIT_BRANCH</string>
+          <string>origin/master</string>
+          <string>GIT_COMMIT</string>
+          <string>a70be05e1a5a8e21b4bf390a77af9e1d9e08541e</string>
+          <string>GIT_PREVIOUS_COMMIT</string>
+          <string>5890af2a9a8060ebb23e827ca996af6a2e672bae</string>
+          <string>HOME</string>
+          <string>/var/lib/jenkins</string>
+          <string>HUDSON_HOME</string>
+          <string>/mnt/jenkins</string>
+          <string>HUDSON_SERVER_COOKIE</string>
+          <string>24493471c661e9ec</string>
+          <string>HUDSON_URL</string>
+          <string>http://107.23.158.13:8080/</string>
+          <string>JENKINS_HOME</string>
+          <string>/mnt/jenkins</string>
+          <string>JENKINS_SERVER_COOKIE</string>
+          <string>24493471c661e9ec</string>
+          <string>JENKINS_URL</string>
+          <string>http://107.23.158.13:8080/</string>
+          <string>JOB_NAME</string>
+          <string>arikBuild</string>
+          <string>JOB_URL</string>
+          <string>http://107.23.158.13:8080/job/arikBuild/</string>
+          <string>LD_LIBRARY_PATH</string>
+          <string>/usr/lib/jvm/java-6-openjdk-amd64/jre/lib/amd64/server:/usr/lib/jvm/java-6-openjdk-amd64/jre/lib/amd64:/usr/lib/jvm/java-6-openjdk-amd64/jre/../lib/amd64</string>
+          <string>NODE_LABELS</string>
+          <string>master</string>
+          <string>NODE_NAME</string>
+          <string>master</string>
+          <string>PATH</string>
+          <string>/usr/local/sbin:/usr/local/bin:/usr/bin:/usr/sbin:/sbin:/bin</string>
+          <string>PWD</string>
+          <string>/</string>
+          <string>SSH_AUTH_SOCK</string>
+          <string>/var/lib/jenkins/.ssh/agent.socket</string>
+          <string>TERM</string>
+          <string>linux</string>
+          <string>UPSTART_INSTANCE</string>
+          <string></string>
+          <string>UPSTART_JOB</string>
+          <string>jenkins</string>
+          <string>WORKSPACE</string>
+          <string>/mnt/jenkins/jobs/arikBuild/workspace</string>
+        </tree-map>
+      </env>
+    </hudson.plugins.parameterizedtrigger.CapturedEnvironmentAction>
+  </actions>
+  <number>8</number>
+  <result>SUCCESS</result>
+  <duration>789</duration>
+  <charset>US-ASCII</charset>
+  <keepLog>false</keepLog>
+  <builtOn></builtOn>
+  <workspace>/mnt/jenkins/jobs/arikBuild/workspace</workspace>
+  <hudsonVersion>1.480.3</hudsonVersion>
+  <scm class="hudson.plugins.git.GitChangeLogParser">
+    <authorOrCommitter>false</authorOrCommitter>
+  </scm>
+  <culprits class="com.google.common.collect.RegularImmutableSortedSet">
+    <string>yadima10</string>
+  </culprits>
+</build>

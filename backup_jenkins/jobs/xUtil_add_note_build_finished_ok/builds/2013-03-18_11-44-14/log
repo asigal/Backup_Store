@@ -1,0 +1,16 @@
+Started by upstream project "[8mha:AAAAnB+LCAAAAAAAAABb85aBtbiIQTGjNKU4P08vOT+vOD8nVc83PyU1x6OyILUoJzMv2y+/JJUBAhiZGBgqihhk0NSjKDWzXb3RdlLBUSYGJk8GtpzUvPSSDB8G5tKinBIGIZ+sxLJE/ZzEvHT94JKizLx0a6BxUmjGOUNodHsLgAyuEgYB/az8JP3Eosxsp9LMnBQjfQCVyq++xQAAAA==[0marikBuild2" build number [8mha:AAAAnB+LCAAAAAAAAABb85aBtbiIQTGjNKU4P08vOT+vOD8nVc83PyU1x6OyILUoJzMv2y+/JJUBAhiZGBgqihhk0NSjKDWzXb3RdlLBUSYGJk8GtpzUvPSSDB8G5tKinBIGIZ+sxLJE/ZzEvHT94JKizLx0a6BxUmjGOUNodHsLQIwSBkH9rPwk/cSizGyn0sycFCN9UwDb3tS1xgAAAA==[0m5
+Building in workspace /mnt/jenkins/jobs/xUtil_add_note_build_finished_ok/workspace
+[workspace] $ /bin/sh -xe /tmp/hudson45669175631170060.sh
++ cd /mnt/jenkins/jobs/arikBuild2/workspace
++ git remote -v
+origin	git@github.com:asigal/robil.git (fetch)
+origin	git@github.com:asigal/robil.git (push)
++ git fetch -f origin refs/notes/*:refs/notes/*
+From github.com:asigal/robil
+ * [new branch]      refs/notes/commits -> refs/notes/commits
++ git notes add -fm Build finished OK
+Overwriting existing notes for object a70be05e1a5a8e21b4bf390a77af9e1d9e08541e
++ git push origin refs/notes/*:refs/notes/*
+To git@github.com:asigal/robil.git
+   b6ec2c0..8a234c2  refs/notes/commits -> refs/notes/commits
+Finished: SUCCESS

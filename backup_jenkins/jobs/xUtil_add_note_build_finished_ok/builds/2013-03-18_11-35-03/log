@@ -1,0 +1,13 @@
+Started by upstream project "[8mha:AAAAmx+LCAAAAAAAAABb85aBtbiIQTGjNKU4P08vOT+vOD8nVc83PyU1x6OyILUoJzMv2y+/JJUBAhiZGBgqihhk0NSjKDWzXb3RdlLBUSYGJk8GtpzUvPSSDB8G5tKinBIGIZ+sxLJE/ZzEvHT94JKizLx0a6BxUmjGOUNodHsLgAzOEgZ+/az8JP3Eosxsp9LMnBR9AK9GLQPEAAAA[0marikBuild" build number [8mha:AAAAmx+LCAAAAAAAAABb85aBtbiIQTGjNKU4P08vOT+vOD8nVc83PyU1x6OyILUoJzMv2y+/JJUBAhiZGBgqihhk0NSjKDWzXb3RdlLBUSYGJk8GtpzUvPSSDB8G5tKinBIGIZ+sxLJE/ZzEvHT94JKizLx0a6BxUmjGOUNodHsLQIwSBgH9rPwk/cSizGyn0sycFH0LADa4YvDFAAAA[0m8
+Building in workspace /mnt/jenkins/jobs/xUtil_add_note_build_finished_ok/workspace
+[workspace] $ /bin/sh -xe /tmp/hudson6149767448377362414.sh
++ cd /mnt/jenkins/jobs/arikBuild/workspace
++ git remote -v
+origin	git@github.com:asigal/robil.git (fetch)
+origin	git@github.com:asigal/robil.git (push)
++ git fetch -f origin refs/notes/*:refs/notes/*
++ git notes add -fm Build finished OK
++ git push origin refs/notes/*:refs/notes/*
+To git@github.com:asigal/robil.git
+   04f1d6d..b6ec2c0  refs/notes/commits -> refs/notes/commits
+Finished: SUCCESS

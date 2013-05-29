@@ -1,0 +1,60 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<project>
+  <actions/>
+  <description>&lt;li&gt;Writes file /mnt/jenkins/rules4build.txt&#xd;
+&lt;li&gt; The file contains all warnnings and error messages that have to be raised when running a build</description>
+  <keepDependencies>false</keepDependencies>
+  <properties/>
+  <scm class="hudson.scm.NullSCM"/>
+  <canRoam>true</canRoam>
+  <disabled>false</disabled>
+  <blockBuildWhenDownstreamBuilding>false</blockBuildWhenDownstreamBuilding>
+  <blockBuildWhenUpstreamBuilding>false</blockBuildWhenUpstreamBuilding>
+  <triggers class="vector"/>
+  <concurrentBuild>false</concurrentBuild>
+  <builders>
+    <hudson.tasks.Shell>
+      <command>#!/bin/bash +e
+RULESFILE=/mnt/jenkins/rules4build.txt
+echo &quot;# Parse Rules for Builds. Written on `date`&quot; &gt; ${RULESFILE}
+
+
+
+echo &quot;# OK Paragraph&quot;             &gt;&gt; ${RULESFILE}
+# ==================================================
+echo &quot;ok /Warning : There are multiple branch changesets here/&quot;   &gt;&gt; ${RULESFILE}
+echo &quot;             &quot;              &gt;&gt; ${RULESFILE}
+
+
+echo &quot;# Errors Paragraph&quot;         &gt;&gt; ${RULESFILE}
+# ==================================================
+echo &quot;error /Error/&quot;              &gt;&gt; ${RULESFILE}
+echo &quot;error /error/&quot;              &gt;&gt; ${RULESFILE}
+echo &quot;             &quot;              &gt;&gt; ${RULESFILE}
+
+
+
+echo &quot;# Warnings Paragraph&quot;       &gt;&gt; ${RULESFILE}
+# ==================================================
+echo &quot;warning /[Ww]arning/&quot;       &gt;&gt; ${RULESFILE}
+
+
+
+echo &quot;# Info Paragraph&quot;       &gt;&gt; ${RULESFILE}
+# ==================================================
+echo &quot;info /Starting &gt;&gt;&gt; C[0-9]+_/&quot;       &gt;&gt; ${RULESFILE}
+
+
+
+
+echo &quot; &quot;
+echo ================
+echo Rules for Builds
+echo ================
+cat $RULESFILE
+ </command>
+    </hudson.tasks.Shell>
+  </builders>
+  <publishers/>
+  <buildWrappers/>
+</project>

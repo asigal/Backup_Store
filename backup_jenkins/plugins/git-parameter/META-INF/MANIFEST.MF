@@ -1,0 +1,18 @@
+Manifest-Version: 1.0
+Archiver-Version: Plexus Archiver
+Created-By: Apache Maven
+Built-By: lukanus
+Build-Jdk: 1.6.0_26
+Extension-Name: git-parameter
+Implementation-Title: git-parameter
+Implementation-Version: 0.2
+Group-Id: org.jenkins-ci.plugins
+Short-Name: git-parameter
+Long-Name: Git Parameter Plug-In
+Url: https://github.com/lukanus/git-parameter
+Plugin-Version: 0.2
+Hudson-Version: 1.451
+Jenkins-Version: 1.451
+Plugin-Dependencies: git:1.1.15
+Plugin-Developers: Łukasz Miłkowski:lukanus:
+

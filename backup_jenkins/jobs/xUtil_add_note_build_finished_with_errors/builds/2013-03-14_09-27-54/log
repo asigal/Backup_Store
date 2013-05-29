@@ -1,0 +1,11 @@
+Started by upstream project "[8mha:AAAAnR+LCAAAAAAAAABb85aBtbiIQTGjNKU4P08vOT+vOD8nVc83PyU1x6OyILUoJzMv2y+/JJUBAhiZGBgqihhk0NSjKDWzXb3RdlLBUSYGJk8GtpzUvPSSDB8G5tKinBIGIZ+sxLJE/ZzEvHT94JKizLx0a6BxUmjGOUNodHsLgAweoBn6WflJ+h6pOTn5IUWZ6empRfoARaIr7McAAAA=[0mHelloTrigger" build number [8mha:AAAAoB+LCAAAAAAAAABb85aBtbiIQTGjNKU4P08vOT+vOD8nVc83PyU1x6OyILUoJzMv2y+/JJUBAhiZGBgqihhk0NSjKDWzXb3RdlLBUSYGJk8GtpzUvPSSDB8G5tKinBIGIZ+sxLJE/ZzEvHT94JKizLx0a6BxUmjGOUNodHsLgAymEgYR/az8JH2P1Jyc/JCizPT01CJ9QzMAU37lackAAAA=[0m16
+Building in workspace /mnt/jenkins/jobs/xUtil_add_note_build_finished_with_errors/workspace
+[workspace] $ /bin/sh -xe /tmp/hudson8724105311006985169.sh
++ cd /mnt/jenkins/jobs/HelloTrigger/workspace
++ git fetch -f origin refs/notes/*:refs/notes/*
++ git notes add -fm Build finished with errors 328c66de9b72fad8a610c489d21be6fa752f441a
+Overwriting existing notes for object 328c66de9b72fad8a610c489d21be6fa752f441a
++ git push origin refs/notes/*:refs/notes/*
+To git@github.com:RobilJenkins/HelloWorld.git
+   ed5eb07..915138a  refs/notes/commits -> refs/notes/commits
+Finished: SUCCESS

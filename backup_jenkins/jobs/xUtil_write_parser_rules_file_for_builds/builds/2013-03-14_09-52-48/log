@@ -1,0 +1,18 @@
+Started by user [8mha:AAAAnR+LCAAAAAAAAABb85aBtbiIQTGjNKU4P08vOT+vOD8nVc83PyU1x6OyILUoJzMv2y+/JJUBAhiZGBgqihhk0NSjKDWzXb3RdlLBUSYGJk8GtpzUvPSSDB8G5tKinBIGIZ+sxLJE/ZzEvHT94JKizLx0a6BxUmjGOUNodHsLgAxeoBn6pcWpRfpB+UmZOV6pedmZecUAux4198cAAAA=[0mRobil Jenkins
+Building in workspace /mnt/jenkins/jobs/xUtil_write_parser_rules_file_for_builds/workspace
+[workspace] $ /bin/bash +e /tmp/hudson2379222694985981158.sh
+ 
+================
+Rules for Builds
+================
+# Parse Rules for Builds. Written on Thu Mar 14 09:52:48 UTC 2013
+# OK Paragraph
+ok /Warning : There are multiple branch changesets here/
+             
+# Errors Paragraph
+error /Error/
+error /error/
+             
+# Warnings Paragraph
+warning /[Ww]arning/
+Finished: SUCCESS
